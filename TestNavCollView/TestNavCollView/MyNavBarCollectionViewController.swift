@@ -11,7 +11,14 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class MyNavBarCollectionViewController: UICollectionViewController {
+	
+	var theData: [String]?
 
+	func updateData(newData: [String]) -> Void {
+		self.theData = newData
+		self.collectionView?.reloadData()
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +35,7 @@ class MyNavBarCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return theData?.count ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
