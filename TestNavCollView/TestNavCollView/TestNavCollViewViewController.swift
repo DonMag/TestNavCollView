@@ -39,7 +39,7 @@ class TestNavCollViewViewController: UIViewController {
 		
 		// set the data in the NavBar Collection View
 		if let d = myData {
-			navCollView?.updateData(newData: d)
+			navCollView?.theData = d
 		}
 		
 		// add the Collection View to the Nav Bar
@@ -61,7 +61,7 @@ class TestNavCollViewViewController: UIViewController {
 		
 		// update the data in the NavBar Collection View
 		if let d = myData {
-			navCollView?.updateData(newData: d)
+			navCollView?.theData = d
 		}
 
 	}
@@ -80,7 +80,7 @@ class TestNavCollViewViewController: UIViewController {
 				
 				// update the data in the NavBar Collection View
 				if let d = myData {
-					navCollView?.updateData(newData: d)
+					navCollView?.theData = d
 				}
 				
 			}
